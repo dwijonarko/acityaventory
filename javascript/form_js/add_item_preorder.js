@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	var count = 0;
 	$("a#add").click(function(){
+	
 		count += 1;
 		        $('#container').append(
 				        '<tr class="records">'
@@ -60,8 +61,6 @@ $(document).ready(function(){
                     var brand	    = item_brand+num_item; 
                     var item_price = "#item_price_";
                     var price  = item_price+num_item;
-                    
-//                    alert(count);
  
                     
                     $(price).val(ui.item.sell_price);
