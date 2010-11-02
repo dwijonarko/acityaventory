@@ -16,16 +16,7 @@ class MPre_order  extends CI_Model
 	    return $data;
     }
     
-    function seek( $keyword )
-    {
-        
-        $this->db->select('*')->from('items');
-        $this->db->like('name',$keyword,'after');
-        $query = $this->db->get();    
-        
-        return $query->result();
-    }
-    
+      
     function save(){
         $po_number  = $this->input->post('po_number');
         $date  = $this->input->post('date');

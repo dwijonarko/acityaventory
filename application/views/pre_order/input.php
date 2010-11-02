@@ -1,6 +1,3 @@
-<style type="text/css" media="screen">
-</style>
-
 <script type="text/javascript" src="<?php echo base_url()?>javascript/form_js/pre_order.js"></script>
 <script type="text/javascript" src="<?php echo base_url()?>javascript/form_js/add_item_preorder.js"></script>
 <script type="text/javascript" language="javascript" charset="utf-8">var base_url = "<?php echo base_url()?>"; var base_controller = "<?php echo base_url()?>pre_order/";</script>
