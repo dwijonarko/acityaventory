@@ -1,9 +1,7 @@
 <html>
 <head>
-<title>Welcome to CodeIgniter</title>
-
+<title>Welcome to Acitya Ventory</title>
 <style type="text/css">
-
 body {
  background-color: #fff;
  margin: 40px;
@@ -40,23 +38,21 @@ code {
 }
 
 </style>
+
 </head>
-<body>
-
-<h1>Welcome to CodeIgniter!</h1>
-
-<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-<p>If you would like to edit this page you'll find it located at:</p>
-<code>application/views/welcome_message.php</code>
-
-<p>The corresponding controller for this page is found at:</p>
-<code>application/controllers/welcome.php</code>
-
-<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
-
-
+demo program :
+<?php
+	echo "<ul>";
+	echo 	"<li>".anchor("brand","Setup Brands")."</li>";
+	echo 	"<li>".anchor("group","Setup Groups")."</li>";
+	echo 	"<li>".anchor("item","Setup Items")."</li>";
+	echo 	"<li>".anchor("measure","Setup Measures")."</li>";
+	echo 	"<li>".anchor("supplier","Setup Suppliers")."</li>";
+	echo 	"<li>".anchor("warehouse","Setup Warehouse")."</li>";
+	echo 	"<li>".anchor("pre_order","Setup Pre Orders")."</li>";
+	echo 	"<li>".anchor("pre_order/show","List Pre Orders")."</li>";
+	echo "</ul>";
+?>
 <p><br />Page rendered in {elapsed_time} seconds</p>
-
 </body>
 </html>
