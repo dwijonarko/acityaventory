@@ -46,7 +46,7 @@ class MPre_order  extends CI_Model
           $amount  		 = $this->input->post('item_amount_'.$i);
           $desc 		 = $this->input->post('item_desc_'.$i);
           $i++;
-          
+        
           $data_details = array(
                                 'po_id' => $inserted_id,
                                 'item_id'        => $item_id,
@@ -58,6 +58,16 @@ class MPre_order  extends CI_Model
           
         }           
         
+    }
+    
+    function getAll(){
+    	$this->db->select('pre_orders.id, pre_orders.po_number,pre_orders.date,pre_orders.term_date,pre_orders.total,pre_orders.desc AS description, suppliers.name AS supplier_name');
+        $this->db->from('pre_orders');
+        $this->db->join('suppliers','suppliers.id=pre_orders.supplier_id');
+        $this->db->order_by('pre_orders.id','ASC');
+        $query = $this->db->get();
+    
+        return $query->result();
     } 
 
 }

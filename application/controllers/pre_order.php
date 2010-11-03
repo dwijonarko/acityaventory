@@ -30,4 +30,13 @@ class Pre_order extends Controller
         
     }
     
+    public function show()
+    {
+    	$data['title']		= "Pre Orders";
+    	$data['subheader']	= "List Pre Order";
+    	$data['main']		= "pre_order/show";
+    	$data['query']		= $this->MPre_order->getAll();
+    	$this->load->view('template', $data);
+    }
+    
 }
