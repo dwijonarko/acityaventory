@@ -1,4 +1,6 @@
 $('#submit').click(function(){
+      $('#group_name').attr("disabled",true);
+      $('#desc').attr("disabled",true);
       
       var form_data = {
         id: $('#group_id').val(),
@@ -18,6 +20,8 @@ $('#submit').click(function(){
             $('#group_id').val(''),
             $('#group_name').val(''),
             $('#desc').val('')
+            $('#group_name').attr("disabled",false);
+      		$('#desc').attr("disabled",false);
             $('#form_show').html(response)
            }else{
             $('#growl').html(response)

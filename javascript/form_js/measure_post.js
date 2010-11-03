@@ -1,5 +1,7 @@
 $('#submit').click(function(){
-      
+      $('#measure_name').attr("disabled",true);
+      $('#desc').attr("disabled",true);
+
       var form_data = {
         id: $('#measure_id').val(),
         measure_name: $('#measure_name').val(),
@@ -17,6 +19,8 @@ $('#submit').click(function(){
             $('#measure_id').val(''),
             $('#measure_name').val(''),
             $('#desc').val('')
+	        $('#measure_name').attr("disabled",false);
+      		$('#desc').attr("disabled",false);
             $('#form_show').html(response)
            }else{
             $('#growl').html(response)

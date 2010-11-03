@@ -6,6 +6,12 @@ $('#submit').click(function(){
         status_id_val ='0';
       }
       
+      $('#item_name').attr("disabled",true);
+      $('#code').attr("disabled",true);
+      $('#sell_price').attr("disabled",true);
+      $('#min_stock').attr("disabled",true);
+      $('#desc').attr("disabled",true);
+      
       var form_data = {
         id              : $('#item_id').val(),
         item_name       : $('#item_name').val(),
@@ -38,6 +44,11 @@ $('#submit').click(function(){
             $('#status_id').val(''),
             $('#min_stock').val('0'),
             $('#desc').val(''),
+	        $('#item_name').attr("disabled",false);
+      	    $('#code').attr("disabled",false);
+      		$('#sell_price').attr("disabled",false);
+      		$('#min_stock').attr("disabled",false);
+      		$('#desc').attr("disabled",false);
             $('#form_show').html(response)
            }else{
             $('#growl').html(response)

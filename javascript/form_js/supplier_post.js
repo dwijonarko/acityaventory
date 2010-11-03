@@ -1,5 +1,10 @@
 $('#submit').click(function(){
-      
+	$('#supplier_name').attr("disabled",true);
+      $('#code').attr("disabled",true);
+      $('#address').attr("disabled",true);
+      $('#phone').attr("disabled",true);
+      $('#desc').attr("disabled",true);
+            
       var form_data = {
         id              : $('#supplier_id').val(),
         supplier_name   : $('#supplier_name').val(),
@@ -23,6 +28,11 @@ $('#submit').click(function(){
             $('#address').val(''),
             $('#phone').val(''),
             $('#desc').val(''),
+            $('#warehouse_name').attr("disabled",false);
+     		$('#code').attr("disabled",false);
+			$('#address').attr("disabled",false);
+			$('#phone').attr("disabled",false);
+			$('#desc').attr("disabled",false);
             $('#form_show').html(response)
            }else{
             $('#growl').html(response)

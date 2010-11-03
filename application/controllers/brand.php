@@ -33,7 +33,6 @@ class Brand extends Controller
     
     function submit()
     {
-                
         if ($this->input->post('ajax')){ // submited data with ajax
             $this->form_validation->set_rules('brand_name', 'Brand Name', 'required');
             $this->form_validation->set_rules('desc', 'Description', 'required');
@@ -49,6 +48,7 @@ class Brand extends Controller
                 
             }else{ // validation true
                 if ($this->input->post('id')>0){ //if have id then update                    
+                    
                     $this->MBrand->update();
                     $data['title']      = 'Brands';
                     $data['query'] = $this->MBrand->getAll();
