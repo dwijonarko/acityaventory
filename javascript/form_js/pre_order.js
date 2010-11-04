@@ -24,5 +24,22 @@ $(document).ready( function() {
             $('#supplier_id').val(ui.item.id);
          },		
     });
+    
+    $("#submit").click(function(){
+    	/*
+    	not yet implemented.. nantinya buat input data pake ajax
+      	$('.input_form').attr("disabled",true); //make effect disabled while post data via ajax
+      	$('.input_item').attr("disabled",true); //make effect disabled while post data via ajax
+		
+		var form_data = { //get value from input
+		    id: $('#brand_id').val(),
+		    brand_name: $('#brand_name').val(),
+		    desc: $('#desc').val(),
+		    ajax:1
+      	};
+		addNotice("<p>Message</p><p>Data successfully inserted</p>");
+     	return false;
+     	*/
+	});
 }) 
 

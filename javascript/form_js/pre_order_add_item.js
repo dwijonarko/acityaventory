@@ -5,15 +5,15 @@ $(document).ready(function(){
 		   $('#container').append(
 			   '<tr class="records">'
 			 + '<td ><div id="'+count+'" style="font-weight: bold;">' + count + ': </div></td>' 
-			 + '<td><input class="items" num="' + count + '" id="item_code_' + count + '" name="item_code_' + count + '" type="text"  size="5"/></td>'
-			 + '<td><input id="item_' + count + '" name="item_' + count +'" type="text" size="10" />'
-			 + '    <input id="item_id_' + count + '" name="item_id_' + count +'" type="hidden"  />'
+			 + '<td><input class="items input_item" num="' + count + '" id="item_code_' + count + '" name="item_code_' + count + '" type="text"  size="5"/></td>'
+			 + '<td><input class="input_item" id="item_' + count + '" name="item_' + count +'" type="text" size="10" />'
+			 + '    <input class="input_item" id="item_id_' + count + '" name="item_id_' + count +'" type="hidden"  />'
 			 + '</td>'  
-			 + '<td><input id="item_brand_' + count + '" name="item_brand_' + count + '" type="text"  size="8"/></td>'
-			 + '<td><input class = "amounts" num="' + count + '" id="item_amount_' + count + '" name="item_amount_' + count + '" type="text" size="6" /></td>'
-			 + '<td><input class = "prices" num="' + count + '" id="item_price_' + count + '" name="item_price_' + count + '" type="text"  size="10" /></td>'
-			 + '<td><input id="item_subtotal_' + count + '" name="item_subtotal_' + count + '" type="text"  size="10"/></td>'
-   			 + '<td><input id="item_desc_' + count + '" name="item_desc_' + count + '" type="text"  size="15"/></td>'
+			 + '<td><input class="input_item" id="item_brand_' + count + '" name="item_brand_' + count + '" type="text"  size="8"/></td>'
+			 + '<td><input class = "input_item amounts" num="' + count + '" id="item_amount_' + count + '" name="item_amount_' + count + '" type="text" size="6" /></td>'
+			 + '<td><input class = "input_item prices" num="' + count + '" id="item_price_' + count + '" name="item_price_' + count + '" type="text"  size="10" /></td>'
+			 + '<td><input class="input_item" id="item_subtotal_' + count + '" name="item_subtotal_' + count + '" type="text"  size="10"/></td>'
+   			 + '<td><input class="input_item" id="item_desc_' + count + '" name="item_desc_' + count + '" type="text"  size="15"/></td>'
 	         + '<td><a class="remove_item" href="#boxfg" >Delete</a>'
 	        + '<input id="rows_' + count + '" name="rows[]" type="hidden"  /></td></tr>'
 			);
@@ -111,5 +111,4 @@ $(document).ready(function(){
      	var subtotal = item_subtotal+num_item;
    		$(subtotal).val(value_subtotal);
      });
-	
 });

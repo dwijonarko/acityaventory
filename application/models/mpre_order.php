@@ -7,12 +7,12 @@ class MPre_order  extends CI_Model
     }
     
     function form(){
-        $data['po_number']  = array('name'=>'po_number','size'=>'30', 'maxlength'=>'30', 'id'=>'po_number');
-        $data['date']  = array('name'=>'date','size'=>'30', 'maxlength'=>'30', 'id'=>'date','class'=>'datepicker');
-        $data['term_date']  = array('name'=>'term_date','size'=>'30', 'maxlength'=>'30', 'id'=>'term_date','class'=>'datepicker');
-	    $data['supplier'] = array('name'=>'supplier','size'=>'30', 'maxlength'=>'30','id'=>'supplier');
-	    $data['address']       = array('name'=>'desc','cols'=>'35', 'rows'=>'5','id'=>'desc','value'=>'','id'=>'address');
-	    $data['desc']       = array('name'=>'desc','cols'=>'35', 'rows'=>'5','id'=>'desc','value'=>'');
+        $data['po_number']  = array('name'=>'po_number','size'=>'30', 'maxlength'=>'30', 'id'=>'po_number', 'class'=>'input_form');
+        $data['date']  = array('name'=>'date','size'=>'30', 'maxlength'=>'30', 'id'=>'date','class'=>'datepicker input_form');
+        $data['term_date']  = array('name'=>'term_date','size'=>'30', 'maxlength'=>'30', 'id'=>'term_date','class'=>'datepicker input_form');
+	    $data['supplier'] = array('name'=>'supplier','size'=>'30', 'maxlength'=>'30','id'=>'supplier', 'class'=>'input_form');
+	    $data['address']       = array('name'=>'desc','cols'=>'35', 'rows'=>'5','id'=>'desc','value'=>'','id'=>'address','class'=>'input_form');
+	    $data['desc']       = array('name'=>'desc','cols'=>'35', 'rows'=>'5','id'=>'desc','value'=>'','class'=>'input_form');
 	    return $data;
     }
     
@@ -60,8 +60,12 @@ class MPre_order  extends CI_Model
         
     }
     
-    function getAll(){
-    	$this->db->select('pre_orders.id, pre_orders.po_number,pre_orders.date,pre_orders.term_date,pre_orders.total,pre_orders.desc AS description, suppliers.name AS supplier_name');
+    function getAll(){ //get all pre order record
+    	$this->db->select("pre_orders.id,pre_orders.po_number");
+    	$this->db->select("date_format(pre_orders.date,'%d-%m-%Y') AS date");			
+    	$this->db->select("date_format(pre_orders.term_date,'%d-%m-%Y') AS term_date");
+    	$this->db->select("pre_orders.total,pre_orders.desc AS description");
+    	$this->db->select("suppliers.name AS supplier_name",FALSE);
         $this->db->from('pre_orders');
         $this->db->join('suppliers','suppliers.id=pre_orders.supplier_id');
         $this->db->order_by('pre_orders.id','ASC');
