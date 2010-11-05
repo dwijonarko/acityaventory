@@ -20,12 +20,12 @@ $('#submit').click(function(){
             $('#brand_id').val(''),
             $('#brand_name').val(''),
             $('#desc').val('')
-            $('#brand_name').attr("disabled",false);
-      		$('#desc').attr("disabled",false);
             $('#form_show').html(response)
            }else{
             $('#growl').html(response)
            }
+           $('#brand_name').attr("disabled",false);
+      	   $('#desc').attr("disabled",false);
         }
       });
       

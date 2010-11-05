@@ -20,12 +20,13 @@ $('#submit').click(function(){
             $('#group_id').val(''),
             $('#group_name').val(''),
             $('#desc').val('')
-            $('#group_name').attr("disabled",false);
-      		$('#desc').attr("disabled",false);
             $('#form_show').html(response)
            }else{
             $('#growl').html(response)
            }
+            $('#group_name').attr("disabled",false);
+      		$('#desc').attr("disabled",false);
+
         }
       });
       

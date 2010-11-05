@@ -18,13 +18,13 @@ $('#submit').click(function(){
            if(message < 0){
             $('#measure_id').val(''),
             $('#measure_name').val(''),
-            $('#desc').val('')
-	        $('#measure_name').attr("disabled",false);
-      		$('#desc').attr("disabled",false);
+            $('#desc').val(''),
             $('#form_show').html(response)
            }else{
             $('#growl').html(response)
            }
+	        $('#measure_name').attr("disabled",false);
+      		$('#desc').attr("disabled",false);
         }
       });
        

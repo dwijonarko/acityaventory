@@ -28,15 +28,16 @@ $('#submit').click(function(){
             $('#address').val(''),
             $('#phone').val(''),
             $('#desc').val(''),
+            $('#form_show').html(response)
+           }else{
+            $('#growl').html(response)
+           }
             $('#warehouse_name').attr("disabled",false);
      		$('#code').attr("disabled",false);
 			$('#address').attr("disabled",false);
 			$('#phone').attr("disabled",false);
 			$('#desc').attr("disabled",false);
-            $('#form_show').html(response)
-           }else{
-            $('#growl').html(response)
-           }
+
         }
       });
        

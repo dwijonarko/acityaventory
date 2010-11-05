@@ -30,16 +30,16 @@ $(document).ready( function() {
     	not yet implemented.. nantinya buat input data pake ajax
       	$('.input_form').attr("disabled",true); //make effect disabled while post data via ajax
       	$('.input_item').attr("disabled",true); //make effect disabled while post data via ajax
+		*/
+		var po_number = $('#po_number').val();
+		var date = $('#date').val();
+		var term_date = $('#term_date').val();
+		var supplier_id = $('#supplier_id').val();
 		
-		var form_data = { //get value from input
-		    id: $('#brand_id').val(),
-		    brand_name: $('#brand_name').val(),
-		    desc: $('#desc').val(),
-		    ajax:1
-      	};
-		addNotice("<p>Message</p><p>Data successfully inserted</p>");
+		//addNotice("<p>Message</p><p>Data successfully inserted</p>");
+     	addNotice("<p>Message</p><p>"+ po_number +"</p><p>"+ date +"</p><p>"+ term_date +"</p><p>"+ supplier_id +"</p>");
      	return false;
-     	*/
+     	
 	});
 }) 
 

@@ -44,15 +44,16 @@ $('#submit').click(function(){
             $('#status_id').val(''),
             $('#min_stock').val('0'),
             $('#desc').val(''),
+            $('#form_show').html(response)
+           }else{
+            $('#growl').html(response)
+           }
 	        $('#item_name').attr("disabled",false);
       	    $('#code').attr("disabled",false);
       		$('#sell_price').attr("disabled",false);
       		$('#min_stock').attr("disabled",false);
       		$('#desc').attr("disabled",false);
-            $('#form_show').html(response)
-           }else{
-            $('#growl').html(response)
-           }
+
         }
         
       });
