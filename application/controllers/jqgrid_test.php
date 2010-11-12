@@ -10,8 +10,8 @@ class Jqgrid_test extends CI_Controller{
 	}
 	
 	function ciGridTest(){
-		$data['title'] = 'jQGrid Codeigniter Integration Demo';
-		$data['subheader'] = 'jQGrid Codeigniter Integration Demo';
+		$data['title'] = 'Pre Orders';
+		$data['subheader'] = 'Pre Order';
 		$data['main'] = 'jqgrid_test/jqgrid';
 		$this->load->vars($data);
 		$this->load->view('template');

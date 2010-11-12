@@ -28,7 +28,7 @@ jQuery("#list1").jqGrid({
    	pager: '#pager1',
    	sortname: 'id',
     viewrecords: true,
-    caption:"jQGrid with Codeigniter"
+    caption:"Pre Orders"
 }).navGrid('#pager1',{edit:false,add:false,del:false});
 });
 </script>
