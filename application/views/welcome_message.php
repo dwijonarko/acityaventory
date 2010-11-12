@@ -43,14 +43,15 @@ code {
 demo program :
 <?php
 	echo "<ul>";
-	echo 	"<li>".anchor("brand","Setup Brands")."</li>";
-	echo 	"<li>".anchor("group","Setup Groups")."</li>";
-	echo 	"<li>".anchor("item","Setup Items")."</li>";
-	echo 	"<li>".anchor("measure","Setup Measures")."</li>";
-	echo 	"<li>".anchor("supplier","Setup Suppliers")."</li>";
-	echo 	"<li>".anchor("warehouse","Setup Warehouse")."</li>";
-	echo 	"<li>".anchor("pre_order","Setup Pre Orders")."</li>";
-	echo 	"<li>".anchor("pre_order/show","List Pre Orders")."</li>";
+	echo 	"<li>".anchor("brand","Setup Brands","target='_blank'")."</li>";
+	echo 	"<li>".anchor("group","Setup Groups","target='_blank'")."</li>";
+	echo 	"<li>".anchor("item","Setup Items","target='_blank'")."</li>";
+	echo 	"<li>".anchor("measure","Setup Measures","target='_blank'")."</li>";
+	echo 	"<li>".anchor("supplier","Setup Suppliers","target='_blank'")."</li>";
+	echo 	"<li>".anchor("warehouse","Setup Warehouse","target='_blank'")."</li>";
+	echo 	"<li>".anchor("pre_order","Setup Pre Orders","target='_blank'")."</li>";
+	echo 	"<li>".anchor("pre_order/show","List Pre Orders","target='_blank'")."</li>";
+	echo 	"<li>".anchor("jqgrid_test","List Pre Orders in jgGrid","target='_blank'")."</li>";
 	echo "</ul>";
 ?>
 <p><br />Page rendered in {elapsed_time} seconds</p>
