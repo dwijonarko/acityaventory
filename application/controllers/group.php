@@ -5,12 +5,12 @@
 #
 #/doc
 
-class Group extends Controller
+class Group extends CI_Controller
 {
     
     function __construct ()
     {
-       parent::Controller();
+       parent::CI_Controller();
        $this->load->model('MGroup');
        
     }

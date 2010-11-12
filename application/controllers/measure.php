@@ -5,12 +5,11 @@
 #
 #/doc
 
-class Measure extends Controller
-{
+class Measure extends CI_Controller{
     
     function __construct ()
     {
-       parent::Controller();
+       parent::CI_Controller();
        $this->load->model('MMeasure');
        
     }

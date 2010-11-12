@@ -5,12 +5,12 @@
 #
 #/doc
 
-class Supplier extends Controller
+class Supplier extends CI_Controller
 {
     
     function __construct ()
     {
-       parent::Controller();
+       parent::CI_Controller();
        $this->load->model('MSupplier');
        
     }
