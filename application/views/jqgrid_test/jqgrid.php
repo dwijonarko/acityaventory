@@ -14,7 +14,7 @@ jQuery("#list1").jqGrid({
    	colNames:['No','No Pre Order','Date','Term Date','Supplier','Total','Description'],       //Grid column headings
    	colModel:[
    		{name:'no',index:'no', width:5, align:"right"},
-   		{name:'no_pre_order',index:'no_po', width:20, align:"left"},
+   		{name:'no_pre_order',index:'no_po', width:30, align:"left"},
    		{name:'date',index:'date', width:20, align:"left"},
    		{name:'term_date',index:'term_date', width:20, align:"left"},
    		{name:'supplier',index:'Supplier', width:20, align:"left"},
