@@ -37,8 +37,8 @@ $(document).ready( function() {
 		var supplier_id = $('#supplier_id').val();
 		
 		//addNotice("<p>Message</p><p>Data successfully inserted</p>");
-     	addNotice("<p>Message</p><p>"+ po_number +"</p><p>"+ date +"</p><p>"+ term_date +"</p><p>"+ supplier_id +"</p>");
-     	return false;
+     	//addNotice("<p>Message</p><p>"+ po_number +"</p><p>"+ date +"</p><p>"+ term_date +"</p><p>"+ supplier_id +"</p>");
+     	//return false;
      	
 	});
 }) 

@@ -17,6 +17,7 @@ class Pre_order extends CI_Controller
         $data               = $this->MPre_order->form();
         $data['title']      = "Pre Orders";
         $data['subheader']  = "Input Pre Order";
+        $data['po_number']['value']="PO-".date('dmY')."-00001";
         $data['main']       = "pre_order/input";
         $this->load->view('template',$data);
     }
